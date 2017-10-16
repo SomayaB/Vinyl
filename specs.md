@@ -100,7 +100,7 @@ Users are able to sign up for a new account.
 
 Routing:
 
-- [ ] __20:__ Navigating to `/sign-up` loads the sign up page.
+- [x] __20:__ Navigating to `/sign-up` loads the sign up page.
 
 Users can:
 

@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const db = require('../../models/albums');
 const albums = require('./albums');
+const authentication = require('./authentication');
 const middlewares = require('../middlewares');
 
 router.use(middlewares.setDefaultReponseLocals);
@@ -15,7 +16,9 @@ router.get('/', (req, res) => {
   });
 });
 
+
 router.use('/albums', albums);
+router.use('/', authentication);
 
 
 module.exports = router;
