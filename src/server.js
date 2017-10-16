@@ -7,9 +7,10 @@ const port = process.env.PORT || 3000
 
 const app = express()
 
-require('ejs')
-app.set('view engine', 'ejs')
+require('pug')
+app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, 'views'))
+app.locals.basedir = path.join(__dirname, '/views');
 
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: false}))
