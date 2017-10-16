@@ -29,3 +29,12 @@ nav a {
   color: white;
   text-decoration: none;
 }
+
+.signup {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.signup-form {
+  padding-top: 20px;
+}

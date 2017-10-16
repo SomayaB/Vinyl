@@ -7,7 +7,7 @@ router.get('/signup', (request, response) => {
     const id = request.session.user.id;
     response.redirect(`/users/${id}`); //TODO create route
   } else {
-    response.render('authentication/signup'); //TODO create view
+    response.render('authentication/signup');
   }
 });
 
@@ -15,8 +15,9 @@ router.post('/signup', (request, response) => {
   const name = request.body.name;
   const email = request.body.email;
   const password = request.body.password;
-    Users.create(name, email, password) //TODO: add query and model
+    Users.create(name, email, password)
     .then(newUser => {
+      console.log('newUser:::', newUser);
       createSession(request, response, newUser);
       request.session.save(error => {
         if (error) {
@@ -28,7 +29,7 @@ router.post('/signup', (request, response) => {
       });
     })
     .catch(error => {
-      response.render('authentication/signup', {warning: 'That username already exists. Please choose another.'}); //TODO add view
+      response.render('authentication/signup', {warning: 'That username already exists. Please choose another.'});
     });
 });
 
