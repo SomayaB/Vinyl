@@ -1,0 +1,14 @@
+extends /partials/layout
+
+block content
+
+  h1 Vinyl
+  
+  h2 Records
+
+  div.album-list
+    each album in albums
+      div
+        h5 
+          a(href=`/albums/${album.id}`) #{album.title}
+        span #{album.artist}
