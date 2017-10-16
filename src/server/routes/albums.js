@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const db = require('../../db');
+const db = require('../../models/albums');
+
 
 router.get('/:albumID', (req, res) => {
   const albumID = req.params.albumID;

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const db = require('../../db');
+const db = require('../../models/albums');
 const albums = require('./albums');
 
 
@@ -12,7 +12,6 @@ router.get('/', (req, res) => {
     res.status(500).render('error', {error});
   });
 });
-
 
 router.use('/albums', albums);
 

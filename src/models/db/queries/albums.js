@@ -1,4 +1,4 @@
-const db = require("./db");
+const db = require("../../db/index");
 
 const getAlbums = () => {
   return db.any(`SELECT * FROM albums`)
