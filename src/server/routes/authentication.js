@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { createSession } = require('../utils');
-// const Users = require('../../models/users');
+const Users = require('../../models/users');
 
 router.get('/signup', (request, response) => {
   if(request.session.user) {
@@ -15,7 +15,7 @@ router.post('/signup', (request, response) => {
   const name = request.body.name;
   const email = request.body.email;
   const password = request.body.password;
-    Users.create(name, email, password); //TODO: add query and model
+    Users.create(name, email, password) //TODO: add query and model
     .then(newUser => {
       createSession(request, response, newUser);
       request.session.save(error => {
