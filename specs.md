@@ -51,11 +51,11 @@ Use this data to seed the `albums` table on your database.
 
 ## General
 
-- [ ] __10:__ Solution is in a public repository called `phase-4-challenge`.
-- [ ] __10:__ All dependencies are declared in a `package.json` file.
-- [ ] __10:__ Express is used for the web server.
-- [ ] __10:__ PostgreSQL is used for the database.
-- [ ] __10:__ Database is seeded with at least 4 albums (check out the [sample data](#sample-data)).
+- [x] __10:__ Solution is in a public repository called `phase-4-challenge`.
+- [x] __10:__ All dependencies are declared in a `package.json` file.
+- [x] __10:__ Express is used for the web server.
+- [x] __10:__ PostgreSQL is used for the database.
+- [x] __10:__ Database is seeded with at least 4 albums (check out the [sample data](#sample-data)).
 
 ## Site Header
 
