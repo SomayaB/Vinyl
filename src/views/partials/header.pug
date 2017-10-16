@@ -1,9 +1,9 @@
 nav.navbar
   a.header-title(href="/") Vinyl
   div.header-info
-  if isLoggedIn 
-    a(href="/users/profile") Profile
-    a(href="/logout") Sign Out
+  if loggedIn
+    a(href=`/users/profile`) Profile
+    a(href="/signout") Sign Out
   else 
     a(href="/signup") Sign Up
     a(href="/signin") Sign In

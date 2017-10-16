@@ -33,5 +33,14 @@ router.post('/signup', (request, response) => {
     });
 });
 
+router.get('/signout', (request, response) => {
+  request.session.destroy((error) => {
+    response.redirect('/');
+    if(error) {
+      console.error(error);
+    }
+  });
+});
+
 
 module.exports = router;
