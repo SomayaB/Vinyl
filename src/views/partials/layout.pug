@@ -3,6 +3,8 @@ html
     title Vinyl
     link(rel='stylesheet', type='text/css', href='/style.css')
   body
+    include header.pug
+    div.content
 
-    block content
-    script(type='text/javascript', src='/script.js')
+      block content
+      script(type='text/javascript', src='/script.js')
