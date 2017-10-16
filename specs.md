@@ -65,13 +65,13 @@ Content in the header varies based on the user's authentication state.
 
 Users can:
 
-- [ ] __20:__ See the name of the website in the site-wide header.
-- [ ] __20:__ See links to "Sign Up" and "Sign In" when logged out.
-- [ ] __20:__ See links to "Profile" and "Sign Out" when logged in.
+- [x] __20:__ See the name of the website in the site-wide header.
+- [x] __20:__ See links to "Sign Up" and "Sign In" when logged out.
+- [x] __20:__ See links to "Profile" and "Sign Out" when logged in.
 
 Layout:
 
-- [ ] __20:__ The layout of the header matches the wireframes.
+- [x] __20:__ The layout of the header matches the wireframes.
 
 ## Home
 
@@ -79,17 +79,17 @@ Displays various album-related information.
 
 Routing:
 
-- [ ] __20:__ Navigating to `/` loads the home page.
+- [x] __20:__ Navigating to `/` loads the home page.
 
 Users can:
 
-- [ ] __20:__ View all albums on the home page (under the "Records" heading).
+- [x] __20:__ View all albums on the home page (under the "Records" heading).
 - [ ] __20:__ View only the _**3 most recent**_ reviews on the home page sorted by newest first.
-- [ ] __20:__ Click on an album title to go to the album page (e.g. `/albums/<ALBUM ID>`).
+- [x] __20:__ Click on an album title to go to the album page (e.g. `/albums/<ALBUM ID>`).
 
 Layout:
 
-- [ ] __10:__ The site-wide header is visible on the home page.
+- [x] __10:__ The site-wide header is visible on the home page.
 - [ ] __20:__ The layout of the home page matches the wireframes.
 
 ## Sign Up

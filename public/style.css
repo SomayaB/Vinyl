@@ -1,0 +1,31 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+.content {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.navbar {
+  background-color: #3e3e3c;
+  border: 1px black solid;
+  display: flex;
+  flex: 0;
+  flex-direction: row;
+  justify-content: space-around;
+  min-height: 10px;
+  overflow: hidden;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
