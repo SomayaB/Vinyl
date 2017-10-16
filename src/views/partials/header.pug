@@ -1,8 +1,8 @@
 nav.navbar
-  a(href="/") Vinyl
-  a(href="/reviews/new") Write a Review
+  a.header-title(href="/") Vinyl
+  div.header-info
   if isLoggedIn 
-    a(href="/users/profile")
+    a(href="/users/profile") Profile
     a(href="/logout") Sign Out
   else 
     a(href="/signup") Sign Up
