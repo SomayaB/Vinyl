@@ -69,3 +69,9 @@ img {
 .review-date {
   margin-left: 20px;
 }
+
+.delete-button {
+  border: none;
+  background: none;
+  padding: 0;
+}

@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const routes = require('./server/routes');
 const session = require('express-session');
 const pgSession = require('connect-pg-simple')(session);
+const methodOverride = require('method-override');
 const config = require('./config/config.js').getConfig();
 
 const app = express();
@@ -15,6 +16,8 @@ app.locals.basedir = path.join(__dirname, '/views');
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(methodOverride('_method'));
+
 
 app.use(session({
   store: new pgSession({
