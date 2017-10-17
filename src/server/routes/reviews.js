@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const Reviews = require('../../models/reviews');
+const Albums = require('../../models/albums');
 const { isAuthorized } = require('../middlewares');
 
 router.delete('/reviews/:id', isAuthorized, (request, response) => {
@@ -28,7 +29,40 @@ router.delete('/reviews/:id', isAuthorized, (request, response) => {
 });
 
 router.get('/albums/:albumId/reviews/new', (request, response) => {
-  response.render('reviews/new');
+  const albumId = request.params.albumId;
+  console.log('albumId:::', albumId);
+  Albums.getById(albumId)
+  .then(album => {
+    response.render('reviews/new', {album});
+  })
+  .catch(error => {
+    console.error(error.message);
+    throw error;
+  });
+});
+
+router.post('/albums/:albumId/reviews/new', isAuthorized, (request, response) => {
+  const content = request.body.content;
+  const userId = request.session.user.id;
+  const albumId = request.params.albumId;
+  const previousPage = request.headers.referer;
+  if (content.length === 0) {
+    response.render('not-authorized', {previousPage, warning: 'Your review cannot be empty.'});
+  } else {
+    const newReview = {
+      content,
+      userId,
+      albumId
+    };
+    Reviews.create(newReview)
+    .then(review => {
+      response.redirect(`/albums/${review.album_id}`);
+    })
+    .catch(error => {
+      console.error(error.message);
+      throw error;
+    });
+  }
 });
 
 module.exports = router;

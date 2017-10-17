@@ -1,1 +1,11 @@
-h1 hi
+extends /partials/layout
+
+block content
+  div.new-review
+    h1 New review for #{album.title}
+    form.flex-full(action=`/albums/${album.id}/reviews/new`, method="post")
+      div
+        textarea.new-review-textarea(type="text", name="content")
+      div 
+        input.new-review-submit-btn(type="submit", placeholder="Submit")
+    
