@@ -12,7 +12,7 @@ router.use(middlewares.isLoggedIn);
 router.use('/', authentication);
 router.use('/', users);
 router.use('/albums', albums);
-router.use('/reviews', reviews);
+router.use('/', reviews);
 
 router.get('/', (request, response) => {
   db.getAlbums()
