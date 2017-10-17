@@ -188,17 +188,17 @@ Displays album details and reviews.
 
 Routing:
 
-- [ ] __20:__ Navigating to `/albums/<ALBUM ID>` loads the album page.
+- [x] __20:__ Navigating to `/albums/<ALBUM ID>` loads the album page.
 
 Users can:
 
-- [ ] __20:__ View the name of the album on the album page.
-- [ ] __20:__ View all reviews for the album on album page sorted by newest first.
+- [x] __20:__ View the name of the album on the album page.
+- [x] __20:__ View all reviews for the album on album page sorted by newest first.
 - [ ] __20:__ View "trash can" delete icons next to reviews the user can delete.
 - [ ] __20:__ View a pop-up with a Cancel button, a Confirm button, and a message that reads, "Are you sure you want to delete this review?" after clicking the trash can icon next to a review.
 - [ ] __20:__ Have the pop-up dismissed after clicking Cancel.
 - [ ] __20:__ Have the review deleted from the database and removed from the album page after clicking Confirm.
-- [ ] __20:__ View a button with the label "Add Review".
+- [x] __20:__ View a button with the label "Add Review".
 - [ ] __20:__ Be redirected to the new review page (e.g. `/albums/<ALBUM ID>/reviews/new`) the after clicking the "Add Review" button.
 
 Users CANNOT:

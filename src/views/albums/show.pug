@@ -1,0 +1,17 @@
+extends /partials/layout
+
+block content
+  div.album-page
+    h1.album-title #{album.title}
+      em.album-artist by #{album.artist}
+
+    if reviews.length
+      h1 Reviews
+        a(href="/reviews/new")
+          button.add-review-button(type="button") Add review
+
+        each review in reviews
+            h3 #{review.title}
+              span.album-review-date #{humanReadableDate(review.date_posted)}
+            p #{review.content}
+            h4 by #{review.author}
