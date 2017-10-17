@@ -8,5 +8,6 @@ CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   email VARCHAR(100) NOT NULL UNIQUE,
-  encrypted_password VARCHAR(255) NOT NULL
+  encrypted_password VARCHAR(255) NOT NULL,
+  date_joined DATE NOT NULL DEFAULT CURRENT_DATE
 );

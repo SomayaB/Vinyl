@@ -12,7 +12,12 @@ const findByEmail = (email) => {
   return db.findByEmail(email);
 };
 
+const findById = (id) => {
+  return db.findById(id);
+};
+
 module.exports = {
   create,
-  findByEmail
+  findByEmail,
+  findById
 };
