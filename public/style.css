@@ -75,3 +75,15 @@ img {
   background: none;
   padding: 0;
 }
+
+.album-page {
+  margin-top: 80px;
+}
+
+.album-title {
+  font-size: 50px;
+}
+
+.album-artist {
+  font-size: 30px;
+}

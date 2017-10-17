@@ -6,25 +6,26 @@ block content
       img(src="/blank-profile-picture.png")
                 
     div.right-column
-      h1 #{user[0].name}
+      h1 #{user.name}
       
-      p Email: #{user[0].email}
+      p Email: #{user.email}
         
-      if user[0].date_joined
+      if user.date_joined
         p Date Joined: #{dateJoined}
       else
         p Date Joined:
         
-      br    
-      h1 Reviews
+      br  
       
-      each review in user
-        div.user-reviews
-          p
-            a(href=`/albums/${review.album_id}`) #{review.album_title}
-            span.review-date #{humanReadableDate(review.review_date_posted)}
-            
-          p #{review.review_content}
-          form(action=`/reviews/${review.review_id}?_method=DELETE`, method="POST", onsubmit=`return confirm('Are you sure you want to delete this review?')`)
-            button.delete-button
-              i.fa.fa-trash.fa-2x(aria-hidden='true')
+      if reviews.length
+        h1 Reviews
+        
+        each review in reviews
+          div.user-reviews
+            p
+              a(href=`/albums/${review.album_id}`) #{review.album_title}
+              span.review-date #{humanReadableDate(review.date_posted)}
+            p #{review.content}
+            form(action=`/reviews/${review.id}?_method=DELETE`, method="POST", onsubmit=`return confirm('Are you sure you want to delete this review?')`)
+              button.delete-button
+                i.fa.fa-trash.fa-2x(aria-hidden='true')

@@ -6,7 +6,7 @@ const Users = require('../../models/users');
 router.get('/sign-up', (request, response) => {
   if(request.session.user) {
     const id = request.session.user.id;
-    response.redirect(`/users/${id}`); //TODO create route
+    response.redirect(`/users/${id}`);
   } else {
     response.render('authentication/signup');
   }
