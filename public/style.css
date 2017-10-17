@@ -38,3 +38,7 @@ nav a {
 .signup-form {
   padding-top: 20px;
 }
+
+.form-errors {
+  color: red;
+}

@@ -8,7 +8,11 @@ const create = (name, email, password) => {
   });
 };
 
+const findByEmail = (email) => {
+  return db.findByEmail(email);
+};
 
 module.exports = {
   create,
+  findByEmail
 };

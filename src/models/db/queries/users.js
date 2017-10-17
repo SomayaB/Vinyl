@@ -15,6 +15,18 @@ const create = (name, email, password) => {
   });
 };
 
+const findByEmail = (email) => {
+ return db.oneOrNone(`
+   SELECT * FROM users
+   WHERE email = $1
+   `, email)
+  .catch(error => {
+    console.error(error.message, "The argument is:::", email);
+    throw error;
+  });
+};
+
 module.exports = {
   create,
+  findByEmail
 };
