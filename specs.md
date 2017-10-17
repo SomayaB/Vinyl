@@ -164,11 +164,11 @@ Displays user details and submitted album reviews.
 
 Routing:
 
-- [ ] __20:__ Navigating to `/users/<USER ID>` loads the user profile page.
+- [x] __20:__ Navigating to `/users/<USER ID>` loads the user profile page.
 
 Users can:
 
-- [ ] __20:__ View their name, email, and join date.
+- [x] __20:__ View their name, email, and join date.
 - [ ] __20:__ View only their submitted reviews sorted by newest first.
 - [ ] __20:__ View "trash can" delete icons only next to reviews submitted by users.
 - [ ] __20:__ View a pop-up with a Cancel button, a Confirm button, and a message that reads, "Are you sure you want to delete this review?" after clicking the delete icon next to a review.
@@ -177,7 +177,7 @@ Users can:
 
 Layout:
 
-- [ ] __10:__ The site-wide header is visible on the user profile page.
+- [x] __10:__ The site-wide header is visible on the user profile page.
 - [ ] __20:__ The layout of the user profile page matches the wireframes.
 
 ## Album Details
