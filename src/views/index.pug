@@ -1,14 +1,23 @@
 extends /partials/layout
 
 block content
+  div.homepage
+    div.homepage-left-colum
+      h1 Vinyl
+      
+      h2 Records
 
-  h1 Vinyl
-  
-  h2 Records
-
-  div.album-list
-    each album in albums
-      div
-        h5 
-          a(href=`/albums/${album.id}`) #{album.title}
-        span #{album.artist}
+      div.album-list
+        each album in albums
+          div
+            h5 
+              a(href=`/albums/${album.id}`) #{album.title}
+            span #{album.artist}
+            
+    div.homepage-right-colum  
+      h1 Recent Reviews
+      each review in reviews
+        p
+        h3 #{review.title}
+        span.album-review-date #{humanReadableDate(review.date_posted)}
+        p #{review.content}

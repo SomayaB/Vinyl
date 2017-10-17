@@ -20,10 +20,15 @@ const create = (newReview) => {
   return db.create(newReview);
 };
 
+const getAll = () => {
+  return db.getAll();
+};
+
 module.exports = {
   deleteById,
   getByAlbumId,
   getById,
   getAllInfoByUserId,
-  create
+  create,
+  getAll
 };

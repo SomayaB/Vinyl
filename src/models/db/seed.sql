@@ -2,7 +2,7 @@ INSERT INTO users
   (name, email, encrypted_password)
 VALUES
   ('Somaya', 'somaya@somaya.com', '$2a$10$dbOW6pfarskkvO5eW234OuHWW/hVAMUWmhHOokvfYvuWXvQefKLzS'),
-  ('Bernie', 'bernie@bernie.com', '$2a$10$R5U.DZ65POb9/kWqvR94DOnRIjU.p5iuZGU0I0TkuCvxwBrySQC0O')
+  ('Bernie', 'bernie@bernie.com', '$2a$10$vI36zrjVAV9wjJW5sU7v3eeNN7EFZ.cYAvcfhRiS5w7akkWClZpce')
 ;
 
 

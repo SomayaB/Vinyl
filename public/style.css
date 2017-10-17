@@ -99,3 +99,17 @@ img {
   width: 40%;
   height: 40%;
 }
+
+.homepage {
+  display: flex;
+  flex-direction: row;
+}
+
+.homepage-left-colum {
+  flex-grow: 1;
+  margin-left: 10;
+}
+
+.homepage-right-colum {
+  flex-grow: 1;
+}
