@@ -219,11 +219,11 @@ Displays a form that allows users to submit album reviews.
 
 Routing:
 
-- [ ] __20:__ Navigating to `/albums/<ALBUM ID>/reviews/new` loads the new review page.
+- [x] __20:__ Navigating to `/albums/<ALBUM ID>/reviews/new` loads the new review page.
 
 Users can:
 
-- [ ] __20:__ Enter multi-line text in the text field.
+- [x] __20:__ Enter multi-line text in the text field.
 - [ ] __20:__ Click the Submit button to submit the review.
 - [ ] __20:__ Be redirected to the album page (e.g. `/albums/<ALBUM ID>`) after submitting the review.
 

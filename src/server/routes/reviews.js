@@ -41,4 +41,24 @@ router.get('/albums/:albumId/reviews/new', (request, response) => {
   });
 });
 
+router.post('/albums/:albumId/reviews/new', (request, response) => {
+  const content = request.body.content;
+  const userId = request.session.user.id;
+  const albumId = request.params.albumId;
+  const newReview = {
+    content,
+    userId,
+    albumId
+  };
+  console.log('newReview:::', newReview);
+  Reviews.create(newReview)
+  .then(review => {
+    response.redirect(`/albums/review.album_id`);
+  })
+  .catch(error => {
+    console.error(error.message);
+    throw error;
+  });
+});
+
 module.exports = router;

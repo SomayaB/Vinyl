@@ -16,9 +16,14 @@ const getAllInfoByUserId = (userId) => {
   return db.getAllInfoByUserId(userId);
 };
 
+const create = (newReview) => {
+  return db.create(newReview);
+};
+
 module.exports = {
   deleteById,
   getByAlbumId,
   getById,
-  getAllInfoByUserId
+  getAllInfoByUserId,
+  create
 };
