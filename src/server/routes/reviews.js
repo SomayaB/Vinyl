@@ -41,24 +41,28 @@ router.get('/albums/:albumId/reviews/new', (request, response) => {
   });
 });
 
-router.post('/albums/:albumId/reviews/new', (request, response) => {
+router.post('/albums/:albumId/reviews/new', isAuthorized, (request, response) => {
   const content = request.body.content;
   const userId = request.session.user.id;
   const albumId = request.params.albumId;
-  const newReview = {
-    content,
-    userId,
-    albumId
-  };
-  console.log('newReview:::', newReview);
-  Reviews.create(newReview)
-  .then(review => {
-    response.redirect(`/albums/review.album_id`);
-  })
-  .catch(error => {
-    console.error(error.message);
-    throw error;
-  });
+  const previousPage = request.headers.referer;
+  if (content.length === 0) {
+    response.render('not-authorized', {previousPage, warning: 'Your review cannot be empty.'});
+  } else {
+    const newReview = {
+      content,
+      userId,
+      albumId
+    };
+    Reviews.create(newReview)
+    .then(review => {
+      response.redirect(`/albums/${review.album_id}`);
+    })
+    .catch(error => {
+      console.error(error.message);
+      throw error;
+    });
+  }
 });
 
 module.exports = router;
