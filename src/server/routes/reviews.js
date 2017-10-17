@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const Reviews = require('../../models/reviews');
+const { isAuthorized } = require('../middlewares');
 
-router.delete('/reviews/:id', (request, response) => {
+router.delete('/reviews/:id', isAuthorized, (request, response) => {
   const id = request.params.id;
   Reviews.deleteById(id)
   .then(() => {
