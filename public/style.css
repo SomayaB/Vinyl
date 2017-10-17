@@ -87,3 +87,15 @@ img {
 .album-artist {
   font-size: 30px;
 }
+
+.new-review {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.new-review-textarea {
+  padding: 20px;
+  margin: 20px;
+  width: 40%;
+  height: 40%;
+}

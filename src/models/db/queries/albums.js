@@ -8,7 +8,7 @@ const getAlbums = () => {
   });
 };
 
-const getAlbumByID = (albumId) => {
+const getById = (albumId) => {
   return db.oneOrNone(`
     SELECT * FROM albums
     WHERE id = $1
@@ -22,5 +22,5 @@ const getAlbumByID = (albumId) => {
 
 module.exports = {
   getAlbums,
-  getAlbumByID,
+  getById,
 };

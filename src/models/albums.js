@@ -4,12 +4,12 @@ const getAlbums = () => {
   return db.getAlbums();
 };
 
-const getAlbumByID = (albumId) => {
-  return db.getAlbumByID(albumId);
+const getById = (albumId) => {
+  return db.getById(albumId);
 };
 
 
 module.exports = {
   getAlbums,
-  getAlbumByID,
+  getById,
 };

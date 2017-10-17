@@ -7,7 +7,7 @@ const { humanReadableDate } = require('../utils');
 router.get('/:albumID', (request, response) => {
   const albumID = request.params.albumID;
 
-  Albums.getAlbumByID(albumID)
+  Albums.getById(albumID)
   .then(album => {
     Reviews.getByAlbumId(album.id)
     .then(reviews => {

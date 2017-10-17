@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const Reviews = require('../../models/reviews');
+const Albums = require('../../models/albums');
 const { isAuthorized } = require('../middlewares');
 
 router.delete('/reviews/:id', isAuthorized, (request, response) => {
@@ -28,7 +29,16 @@ router.delete('/reviews/:id', isAuthorized, (request, response) => {
 });
 
 router.get('/albums/:albumId/reviews/new', (request, response) => {
-  response.render('reviews/new');
+  const albumId = request.params.albumId;
+  console.log('albumId:::', albumId);
+  Albums.getById(albumId)
+  .then(album => {
+    response.render('reviews/new', {album});
+  })
+  .catch(error => {
+    console.error(error.message);
+    throw error;
+  });
 });
 
 module.exports = router;
