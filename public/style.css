@@ -42,3 +42,22 @@ nav a {
 .form-errors {
   color: red;
 }
+
+img {
+  max-height: 200px;
+  margin-top: 20;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.right-column {
+  flex-grow: 1;
+}
+
+.left-column {
+  flex-grow: 1;
+  margin-left: 10;
+}
