@@ -6,14 +6,22 @@ block content
       img(src="/blank-profile-picture.png")
                 
     div.right-column
-      h1 #{user.name}
+      h1 #{user[0].name}
       
-      p Email: #{user.email}
+      p Email: #{user[0].email}
         
-      if user.date_joined
-        p Date Joined: #{humanReadableDate}
+      if user[0].date_joined
+        p Date Joined: #{dateJoined}
       else
         p Date Joined:
         
       br    
       h1 Reviews
+      
+      each review in user
+        div.user-reviews
+          p
+            a(href=`/albums/${review.album_id}`) #{review.album_title}
+            span.review-date #{humanReadableDate(review.review_date_posted)}
+            
+          p #{review.review_content}

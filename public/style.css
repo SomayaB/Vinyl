@@ -61,3 +61,11 @@ img {
   flex-grow: 1;
   margin-left: 10;
 }
+
+.user-reviews {
+  margin-bottom: 40px;
+}
+
+.review-date {
+  margin-left: 20px;
+}
