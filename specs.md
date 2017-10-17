@@ -204,7 +204,7 @@ Users can:
 Users CANNOT:
 
 - [x] __20:__ Delete a review when not logged in.
-- [ ] __20:__ Delete another user's review.
+- [x] __20:__ Delete another user's review.
 
 Layout:
 
