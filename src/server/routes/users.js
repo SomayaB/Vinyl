@@ -2,8 +2,8 @@ const router = require('express').Router();
 const Users = require('../../models/users');
 const { humanReadableDate } = require('../utils');
 
-router.get('/:id', (request, response) => {
-  const id = request.params.id;
+router.get(['/users/:id', '/profile'], (request, response) => {
+  const id = request.session.user.id;
   Users.findInfoByUserId(id)
   .then(user => {
     const dateJoined = humanReadableDate(user[0].date_joined);

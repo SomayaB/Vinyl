@@ -6,6 +6,7 @@ const humanReadableDate = (date) => {
   return date.toDateString();
 };
 
+
 module.exports = {
   createSession,
   humanReadableDate

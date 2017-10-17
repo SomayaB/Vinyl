@@ -10,7 +10,7 @@ router.use(middlewares.setDefaultReponseLocals);
 
 router.use(middlewares.isLoggedIn);
 router.use('/', authentication);
-router.use('/users', users);
+router.use('/', users);
 router.use('/albums', albums);
 router.use('/reviews', reviews);
 
