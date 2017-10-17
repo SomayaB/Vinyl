@@ -100,23 +100,23 @@ Users are able to sign up for a new account.
 
 Routing:
 
-- [ ] __20:__ Navigating to `/sign-up` loads the sign up page.
+- [x] __20:__ Navigating to `/sign-up` loads the sign up page.
 
 Users can:
 
-- [ ] __20:__ Sign up for an account with name, email, and password.
-- [ ] __20:__ Be redirected to their profile page (e.g. `/users/<USER ID>`) after signing up.
+- [x] __20:__ Sign up for an account with name, email, and password.
+- [x] __20:__ Be redirected to their profile page (e.g. `/users/<USER ID>`) after signing up.
 
 Users CANNOT:
 
-- [ ] __30:__ Sign up without a name value.
-- [ ] __30:__ Sign up without an email address value.
-- [ ] __30:__ Sign up with an email that is already in use.
+- [x] __30:__ Sign up without a name value.
+- [x] __30:__ Sign up without an email address value.
+- [x] __30:__ Sign up with an email that is already in use.
 
 Layout:
 
-- [ ] __10:__ The site-wide header is visible on the sign up page.
-- [ ] __20:__ The layout of the sign up page matches the wireframes.
+- [x] __10:__ The site-wide header is visible on the sign up page.
+- [x] __20:__ The layout of the sign up page matches the wireframes.
 
 ## Sign In
 
@@ -126,21 +126,21 @@ Users are able to sign in to an account.
 
 Routing:
 
-- [ ] __20:__ Navigating to `/sign-in` loads the sign in page.
+- [x] __20:__ Navigating to `/sign-in` loads the sign in page.
 
 Users can:
 
-- [ ] __20:__ Sign in to an existing account with an email address and password.
-- [ ] __20:__ Be redirected to their profile page (e.g. `/users/<USER ID>`) after signing in.
+- [x] __20:__ Sign in to an existing account with an email address and password.
+- [x] __20:__ Be redirected to their profile page (e.g. `/users/<USER ID>`) after signing in.
 
 Users CANNOT:
 
-- [ ] __30:__ Sign in with an invalid email address and password combination.
+- [x] __30:__ Sign in with an invalid email address and password combination.
 
 Layout:
 
-- [ ] __10:__ The site-wide header is visible on the sign in page.
-- [ ] __20:__ The layout of the sign in page matches the wireframes.
+- [x] __10:__ The site-wide header is visible on the sign in page.
+- [x] __20:__ The layout of the sign in page matches the wireframes.
 
 ## Sign Out
 
@@ -150,7 +150,7 @@ Users are able to sign out.
 
 Users can:
 
-- [ ] __20:__ Be redirected to the home page (e.g. `/`) after signing out by clicking the Sign Out button.
+- [x] __20:__ Be redirected to the home page (e.g. `/`) after signing out by clicking the Sign Out button.
 
 Users CANNOT:
 

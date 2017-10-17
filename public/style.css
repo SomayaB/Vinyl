@@ -29,3 +29,16 @@ nav a {
   color: white;
   text-decoration: none;
 }
+
+.signup-signin {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.signup-signin-form {
+  padding-top: 20px;
+}
+
+.form-errors {
+  color: red;
+}

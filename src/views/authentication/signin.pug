@@ -1,0 +1,17 @@
+extends /partials/layout
+
+block content
+  div.signup-signin
+    h1.signup-signin-title Sign In
+      div.signup-signin-form
+        form(method="post", action="/sign-in" )
+          pre.form-errors #{warning}
+          
+          div.email
+            h5 email:
+              input(type="email", name="email", maxlength="40" required)
+          div.password
+            h5 password:
+              input(type="password", name="password" required)
+          br
+          input(type="submit" value="Sign In")
