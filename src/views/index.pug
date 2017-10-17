@@ -18,6 +18,6 @@ block content
       h1 Recent Reviews
       each review in reviews
         p
-        //- h3 #{album.title} need query that gets name of album too
+        h3 #{review.title}
         span.album-review-date #{humanReadableDate(review.date_posted)}
         p #{review.content}

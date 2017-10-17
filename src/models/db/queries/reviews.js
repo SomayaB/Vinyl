@@ -67,6 +67,9 @@ const create = (newReview) => {
 const getAll = () => {
   return db.any(`
     SELECT * FROM reviews
+    JOIN albums
+    ON reviews.album_id = albums.id
+    ORDER BY date_posted DESC
     LIMIT 3
   `)
   .catch(error => {
