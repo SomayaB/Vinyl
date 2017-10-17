@@ -9,9 +9,10 @@
     "start": "node src/server.js",
     "dev": "NODE_ENV=development nodemon src/server.js",
     "db:create": "createdb vinyl",
-    "db:reset": "dropdb vinyl && createdb vinyl && npm run db:schema && npm run db:seed && npm run db:session",
+    "db:reset": "dropdb vinyl && createdb vinyl && npm run db:schema && npm run db:seed:albums && npm run db:seed:users:reviews &&npm run db:session",
     "db:schema": "psql -d vinyl < src/models/db/schema.sql",
-    "db:seed": "psql -d vinyl < src/models/db/albums.sql",
+    "db:seed:albums": "psql -d vinyl < src/models/db/albums.sql",
+    "db:seed:users:reviews": "psql -d vinyl < src/models/db/seed.sql",
     "db:session": "psql vinyl < node_modules/connect-pg-simple/table.sql",
     "test": "./node_modules/.bin/eslint src"
   },
