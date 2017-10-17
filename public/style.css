@@ -42,3 +42,36 @@ nav a {
 .form-errors {
   color: red;
 }
+
+img {
+  max-height: 200px;
+  margin-top: 20;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.right-column {
+  flex-grow: 1;
+}
+
+.left-column {
+  flex-grow: 1;
+  margin-left: 10;
+}
+
+.user-reviews {
+  margin-bottom: 40px;
+}
+
+.review-date {
+  margin-left: 20px;
+}
+
+.delete-button {
+  border: none;
+  background: none;
+  padding: 0;
+}
