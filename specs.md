@@ -178,7 +178,7 @@ Users can:
 Layout:
 
 - [x] __10:__ The site-wide header is visible on the user profile page.
-- [ ] __20:__ The layout of the user profile page matches the wireframes.
+- [x] __20:__ The layout of the user profile page matches the wireframes.
 
 ## Album Details
 
@@ -209,7 +209,7 @@ Users CANNOT:
 Layout:
 
 - [x] __10:__ The site-wide header is visible on the album page.
-- [ ] __20:__ The layout of the album page matches the wireframes.
+- [x] __20:__ The layout of the album page matches the wireframes.
 
 ## New Review
 

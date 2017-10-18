@@ -63,6 +63,7 @@ nav a {
 
 .right-column {
   flex-grow: 1;
+  margin-right: 20px;
 }
 
 
@@ -80,8 +81,22 @@ nav a {
   padding: 0;
 }
 
+.reviews-title h1 {
+  display: inline;
+  margin-left: -15px;
+  margin-right: 400px;
+}
+
+.reviews-title-date h3 {
+  margin-left: -540px;
+}
+
 .album-page {
   margin-top: 80px;
+  text-align: center;
+}
+.album-page-content {
+  display: inline-block;
 }
 
 .album-title {

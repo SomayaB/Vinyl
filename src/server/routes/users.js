@@ -13,13 +13,11 @@ router.get(['/users/:id', '/profile'], (request, response) => {
       response.render('users/show', {user, reviews, dateJoined, humanReadableDate});
     })
     .catch(error => {
-      console.error(error.message);
-      throw error;
+      response.status(500).render('error', {error});
     });
   })
   .catch(error => {
-    console.error(error.message);
-    throw error;
+    response.status(500).render('error', {error});
   });
 });
 

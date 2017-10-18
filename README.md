@@ -28,6 +28,6 @@ Use the following commands to set up and seed your database:
 
 1. Create PostgreSQL database `vinyl`: `$ npm run db:create`
 1. Set up database tables from `schema.sql`: `$ npm run db:schema`
-1. Load seed data from `albums.sql`: `$ npm run db:seed`
+1. Load seed data from `albums.sql`: `$ npm run db:seed:albums`
 1. Set up session database: `npm run db:session`
 1. Create a .env file and copy and paste the content of the .env.template file and insert your own environment variables.
