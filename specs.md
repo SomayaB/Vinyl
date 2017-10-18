@@ -90,7 +90,7 @@ Users can:
 Layout:
 
 - [x] __10:__ The site-wide header is visible on the home page.
-- [ ] __20:__ The layout of the home page matches the wireframes.
+- [x] __20:__ The layout of the home page matches the wireframes.
 
 ## Sign Up
 

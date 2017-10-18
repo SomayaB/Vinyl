@@ -1,23 +1,24 @@
 extends /partials/layout
 
 block content
+  img.vinlys-img(src="/vinyls.jpg")
   div.homepage
-    div.homepage-left-colum
-      h1 Vinyl
-      
-      h2 Records
+    div.homepage-left-column
+      h1 Records
 
       div.album-list
         each album in albums
           div
-            h5 
+            h3
               a(href=`/albums/${album.id}`) #{album.title}
             span #{album.artist}
             
-    div.homepage-right-colum  
+    div.homepage-right-column
       h1 Recent Reviews
-      each review in reviews
-        p
-        h3 #{review.title}
-        span.album-review-date #{humanReadableDate(review.date_posted)}
-        p #{review.content}
+      div
+        each review in reviews
+          span
+            h3 #{review.album_title}
+              h5.album-review-date #{humanReadableDate(review.date_posted)}
+          p #{review.content}
+          h4.homepage-review-author by #{review.author}
