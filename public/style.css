@@ -7,11 +7,13 @@ html, body {
 .content {
   margin-top: 50px;
   margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .navbar {
   background-color: #3e3e3c;
-  border: 1px black solid;
+  border: 1px #3e3e3c solid;
   display: flex;
   flex: 0;
   flex-direction: row;
@@ -43,7 +45,7 @@ nav a {
   color: red;
 }
 
-img {
+.profile-img {
   max-height: 200px;
   margin-top: 20;
 }
@@ -53,14 +55,17 @@ img {
   flex-direction: row;
 }
 
-.right-column {
-  flex-grow: 1;
-}
-
 .left-column {
   flex-grow: 1;
   margin-left: 10;
+  margin-right: 20px;
 }
+
+.right-column {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
 
 .user-reviews {
   margin-bottom: 40px;
@@ -76,8 +81,22 @@ img {
   padding: 0;
 }
 
+.reviews-title h1 {
+  display: inline;
+  margin-left: -15px;
+  margin-right: 400px;
+}
+
+.reviews-title-date h3 {
+  margin-left: -540px;
+}
+
 .album-page {
   margin-top: 80px;
+  text-align: center;
+}
+.album-page-content {
+  display: inline-block;
 }
 
 .album-title {
@@ -103,13 +122,31 @@ img {
 .homepage {
   display: flex;
   flex-direction: row;
+  margin-right: 50px;
 }
 
-.homepage-left-colum {
+.homepage-left-column {
   flex-grow: 1;
   margin-left: 10;
+  margin-right: 150px;
 }
 
-.homepage-right-colum {
+.homepage-right-column {
   flex-grow: 1;
+}
+
+.vinlys-img {
+  width: 100vw;
+  margin-left: -20px;
+  margin-top: -9px;
+}
+
+.album-review-date {
+  float: right;
+  margin-top: -36px;
+}
+
+.homepage-review-author {
+  margin-left: 600px;
+  margin-top: -20px;
 }

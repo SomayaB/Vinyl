@@ -30,8 +30,7 @@ router.post('/sign-up', (request, response) => {
           createSession(request, response, newUser);
           request.session.save(error => {
             if (error) {
-              console.error(error);
-              throw error;
+              response.status(500).render('error', {error});
             } else {
               response.redirect(`/users/${newUser.id}`);
             }
@@ -40,7 +39,7 @@ router.post('/sign-up', (request, response) => {
       }
     })
     .catch(error => {
-      console.error(error);
+      response.status(500).render('error', {error});
     });
   }
 });
@@ -67,7 +66,7 @@ router.post('/sign-in', (request, response) => {
         createSession(request, response, user);
         request.session.save(error => {
           if(error) {
-            console.error(error);
+            response.status(500).render('error', {error});
           } else {
             response.redirect(`/users/${user.id}`);
           }
@@ -87,7 +86,7 @@ router.get('/signout', (request, response) => {
   request.session.destroy((error) => {
     response.redirect('/');
     if(error) {
-      console.error(error);
+      response.status(500).render('error', {error});
     }
   });
 });

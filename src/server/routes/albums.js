@@ -12,6 +12,9 @@ router.get('/:albumID', (request, response) => {
     Reviews.getByAlbumId(album.id)
     .then(reviews => {
       response.render('albums/show', {album, reviews, humanReadableDate});
+    })
+    .catch(error => {
+      response.status(500).render('error', {error});
     });
   })
   .catch(error => {

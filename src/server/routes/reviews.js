@@ -18,26 +18,23 @@ router.delete('/reviews/:id', isAuthorized, (request, response) => {
         response.redirect(`/users/${userId}`);
       })
       .catch(error => {
-      console.log(error);
+        response.status(500).render('error', {error});
       });
     }
   })
   .catch(error => {
-    console.error(error.message);
-    throw error;
+    response.status(500).render('error', {error});
   });
 });
 
 router.get('/albums/:albumId/reviews/new', (request, response) => {
   const albumId = request.params.albumId;
-  console.log('albumId:::', albumId);
   Albums.getById(albumId)
   .then(album => {
     response.render('reviews/new', {album});
   })
   .catch(error => {
-    console.error(error.message);
-    throw error;
+    response.status(500).render('error', {error});
   });
 });
 
@@ -59,8 +56,7 @@ router.post('/albums/:albumId/reviews/new', isAuthorized, (request, response) =>
       response.redirect(`/albums/${review.album_id}`);
     })
     .catch(error => {
-      console.error(error.message);
-      throw error;
+      response.status(500).render('error', {error});
     });
   }
 });
