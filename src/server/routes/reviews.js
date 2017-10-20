@@ -42,14 +42,18 @@ router.post('/albums/:albumId/reviews/new', isAuthorized, (request, response) =>
   const content = request.body.content;
   const userId = request.session.user.id;
   const albumId = request.params.albumId;
+  const rating = request.body.rating;
   const previousPage = request.headers.referer;
+  console.log('rating:::', rating);
+
   if (content.length === 0) {
     response.render('not-authorized', {previousPage, warning: 'Your review cannot be empty.'});
   } else {
     const newReview = {
       content,
       userId,
-      albumId
+      albumId,
+      rating
     };
     Reviews.create(newReview)
     .then(review => {

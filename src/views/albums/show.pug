@@ -17,6 +17,16 @@ block content
             div.reviews-title-date
               h3 #{album.title} 
               span.album-review-date #{humanReadableDate(review.date_posted)}
+              if review.rating === 5
+                h5 ⭐️⭐️⭐️⭐️⭐️
+              if review.rating === 4
+                h5 ⭐️⭐️⭐️⭐️
+              if review.rating === 3
+                h5 ⭐️⭐️⭐️ 
+              if review.rating === 2
+                h5 ⭐️⭐️
+              if review.rating === 1
+                h5 ⭐️  
               p #{review.content}
               h4 by #{review.author}
               form(action=`/reviews/${review.id}?_method=DELETE`, method="POST", onsubmit=`return confirm('Are you sure you want to delete this review?')`)

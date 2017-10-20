@@ -13,7 +13,7 @@ const deleteById = (id) => {
 
 const getByAlbumId = (albumId, offset) => {
   return db.any(`
-    SELECT reviews.id, reviews.content, reviews.date_posted, users.name AS author FROM reviews
+    SELECT reviews.id, reviews.content, reviews.date_posted, reviews.rating, users.name AS author FROM reviews
     JOIN users
     ON reviews.user_id = users.id
     WHERE album_id = $1
@@ -55,12 +55,12 @@ const getAllInfoByUserId = (userId) => {
 const create = (newReview) => {
   return db.oneOrNone(`
     INSERT INTO
-      reviews (content, user_id, album_id)
+      reviews (content, user_id, album_id, rating)
     VALUES
-      ($1, $2, $3)
+      ($1, $2, $3, $4)
     RETURNING
       *
-    `, [ newReview.content, newReview.userId, newReview.albumId ])
+    `, [ newReview.content, newReview.userId, newReview.albumId, newReview.rating ])
   .catch(error => {
     console.error(error.message);
     throw error;
