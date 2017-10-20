@@ -16,7 +16,7 @@ block content
           each review in reviews
             div.reviews-title-date
               h3 #{album.title} 
-              span.album-review-date #{humanReadableDate(review.date_posted)}
+              span.album-review-date #{relativeDate(review.date_posted)}
               if review.rating === 5
                 h5 ⭐️⭐️⭐️⭐️⭐️
               if review.rating === 4

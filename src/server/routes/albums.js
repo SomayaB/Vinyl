@@ -1,8 +1,7 @@
 const router = require('express').Router();
 const Albums = require('../../models/albums');
 const Reviews = require('../../models/reviews');
-const { humanReadableDate } = require('../utils');
-
+const relativeDate = require('relative-date');
 
 router.get('/:albumID', (request, response) => {
   const albumID = request.params.albumID;
@@ -11,10 +10,9 @@ router.get('/:albumID', (request, response) => {
   const offset = (page - 1) * 10;
   Albums.getById(albumID)
   .then(album => {
-    console.log('album ID', album.id);
     Reviews.getByAlbumId(album.id, offset)
     .then(reviews => {
-      response.render('albums/show', {album, reviews, humanReadableDate, page});
+      response.render('albums/show', {album, reviews, relativeDate, page});
     })
     .catch(error => {
       response.status(500).render('error', {error});
