@@ -10,6 +10,6 @@ const getById = (albumId) => {
 
 
 module.exports = {
-  getAlbums,
-  getById,
+  getAlbums: db.getAlbums,
+  getById: db.getById
 };
