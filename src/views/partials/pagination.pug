@@ -1,0 +1,8 @@
+div
+  -console.log('page:::', page);
+  if page > 1
+    a(href=`/albums/1/?page=${page-1}`) Previous
+    |   
+    a(href=`/albums/1/?page=${page+1}`) Next
+  else
+    a(href=`/albums/1/?page=${page+1}`) Next  

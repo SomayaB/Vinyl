@@ -4,8 +4,8 @@ const deleteById = (id) => {
   return db.deleteById(id);
 };
 
-const getByAlbumId = (albumId) => {
-  return db.getByAlbumId(albumId);
+const getByAlbumId = (albumId, offset) => {
+  return db.getByAlbumId(albumId, offset);
 };
 
 const getById = (id) => {

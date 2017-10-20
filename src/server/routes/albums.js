@@ -6,12 +6,15 @@ const { humanReadableDate } = require('../utils');
 
 router.get('/:albumID', (request, response) => {
   const albumID = request.params.albumID;
-
+  let page = request.query.page || 1;
+  page = Number(page);
+  const offset = (page - 1) * 10;
   Albums.getById(albumID)
   .then(album => {
-    Reviews.getByAlbumId(album.id)
+    console.log('album ID', album.id);
+    Reviews.getByAlbumId(album.id, offset)
     .then(reviews => {
-      response.render('albums/show', {album, reviews, humanReadableDate});
+      response.render('albums/show', {album, reviews, humanReadableDate, page});
     })
     .catch(error => {
       response.status(500).render('error', {error});

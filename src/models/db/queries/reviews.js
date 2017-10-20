@@ -11,15 +11,18 @@ const deleteById = (id) => {
   });
 };
 
-const getByAlbumId = (albumId) => {
+const getByAlbumId = (albumId, offset) => {
   return db.any(`
     SELECT reviews.id, reviews.content, reviews.date_posted, users.name AS author FROM reviews
     JOIN users
     ON reviews.user_id = users.id
     WHERE album_id = $1
-    `, albumId)
+    ORDER BY reviews.id ASC
+    OFFSET $2
+    LIMIT 10
+    `, [albumId, offset])
   .catch(error => {
-    console.error(error.message, "The argument is:::", albumId);
+    console.error(error.message, "Arguments:::", arguments);
     throw error;
   });
 };
