@@ -7,5 +7,8 @@ html
     div.content
 
       block content
+      script.
+        UPLOADCARE_PUBLIC_KEY = "demopublickey";
+      script(src='https://ucarecdn.com/libs/widget/3.1.4/uploadcare.full.min.js', charset='utf-8')
       script(type='text/javascript', src='/script.js')
       script(src='https://use.fontawesome.com/f62333e5c9.js')
