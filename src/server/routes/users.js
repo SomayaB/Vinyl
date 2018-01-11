@@ -2,8 +2,9 @@ const router = require('express').Router();
 const Users = require('../../models/users');
 const Reviews = require('../../models/reviews');
 const { humanReadableDate } = require('../utils');
+const { isAuthorized } = require('../middlewares');
 
-router.get(['/users/:id', '/profile'], (request, response) => {
+router.get(['/users/:id', '/profile'], isAuthorized, (request, response) => {
   const id = request.session.user.id;
   Users.findById(id)
   .then(user => {

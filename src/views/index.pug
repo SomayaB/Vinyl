@@ -1,7 +1,7 @@
 extends /partials/layout
 
 block content
-  img.vinlys-img(src="/vinyls.jpg")
+  img.vinyls-img(src="/vinyls.jpg")
   div.homepage
     div.homepage-left-column
       h1 Records
@@ -20,5 +20,9 @@ block content
           span
             h3 #{review.album_title}
               h5.album-review-date #{humanReadableDate(review.date_posted)}
-          p #{review.content}
+          if review.content.length <= 400
+            p #{review.content}
+          else  
+            p #{review.content.slice(0, 400)} 
+              a(href=`/albums/${review.album_id}`) ...
           h4.homepage-review-author by #{review.author}

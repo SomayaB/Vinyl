@@ -8,21 +8,10 @@ const create = (name, email, password) => {
   });
 };
 
-const findByEmail = (email) => {
-  return db.findByEmail(email);
-};
-
-const findById = (id) => {
-  return db.findById(id);
-};
-
-const findInfoByUserId = (userId) => {
-  return db.findInfoByUserId(userId);
-};
 
 module.exports = {
   create,
-  findByEmail,
-  findById,
-  findInfoByUserId
+  findByEmail: db.findByEmail,
+  findById: db.findById,
+  findInfoByUserId: db.findInfoByUserId
 };
