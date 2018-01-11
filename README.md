@@ -2,32 +2,24 @@
 
 A community for record enthusiasts to review their favorite albums.
 
-Part of the application has already been built for you. Your job is to take it to completion.
+## Setting up Development Environment
 
-## Getting Started
+- Clone the repository
+- Install your dependencies: `npm install`
+- Create your database: `npm run db:create`
+- Load the schema and seed data: `npm run db:reset`
+- Create a `.env` file and copy and paste the content of the `.env.template` file and insert your own environment variables.
+- Run the server: `npm run dev`
 
-Run `$ npm run` to see the list of commands available. To see what each command does, look at `package.json`.
+## Technical Stack
 
-The app uses a basic Express file structure, and includes SQL files to set up the schema and import data.
+### Back End
+* [Node.js](https://nodejs.org/en/)
+* [Express.js](https://expressjs.com/) ([Documentation](https://expressjs.com/en/4x/api.html))
 
-```sh
-src/
-  albums.sql          # seed album data
-  database.js         # database connection and queries
-  package.json        # npm standard
-  public/             # static assets go here
-  README.md           # you are here
-  schema.sql          # define database schema here
-  server.js           # web server
-  views/              # html templates go here
-```
+### Database
+* [PostgreSQL](https://www.postgresql.org/)
+  * [pg-promise](https://github.com/vitaly-t/pg-promise)
 
-### Setting Up Your Database
-
-Use the following commands to set up and seed your database:
-
-1. Create PostgreSQL database `vinyl`: `$ npm run db:create`
-1. Set up database tables from `schema.sql`: `$ npm run db:schema`
-1. Load seed data from `albums.sql`: `$ npm run db:seed:albums`
-1. Set up session database: `npm run db:session`
-1. Create a .env file and copy and paste the content of the .env.template file and insert your own environment variables.
+### Front End
+* [Pug](https://github.com/pugjs/pug)
